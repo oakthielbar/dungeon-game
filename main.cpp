@@ -73,12 +73,14 @@ int main(){
 
 	cout << "Adding modification..." << endl;
 	player->addModification(&Modification::Modifications::usesLightWeapons);
+	player->addModification(&Modification::Modifications::usesAdvancedMeleeWeapons);
 	cout << "Modification applied." << endl;
 
 	displayPcInfo(player);
 
 	cout << "Removing modification..." << endl;
 	player->removeModification(&Modification::Modifications::usesLightWeapons);
+	player->removeModification(&Modification::Modifications::usesAdvancedMeleeWeapons);
 	cout << "Modification removed." << endl;
 
 	displayPcInfo(player);

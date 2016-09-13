@@ -22,6 +22,8 @@ namespace Modification{
 
 	namespace Modifications{
 		extern modification usesLightWeapons;
+		extern modification usesStandardMeleeWeapons;
+		extern modification usesAdvancedMeleeWeapons;
 	}
 }
 

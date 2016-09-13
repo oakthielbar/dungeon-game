@@ -14,6 +14,7 @@ using std::vector;
 
 namespace Equipment{
 	enum Category{
+		WEAPON_SLINGS,
 		WEAPON_DAGGERS,
 		WEAPON_STAVES,
 		WEAPON_POLEARMS,

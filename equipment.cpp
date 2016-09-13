@@ -18,6 +18,7 @@ namespace Equipment{
 
 	map<Category, string> createCategoryNameMap(){
 		map<Category, string> categoryToName = {
+			{ WEAPON_SLINGS, "Slings" },
 			{ WEAPON_DAGGERS, "Daggers" },
 			{ WEAPON_STAVES, "Staves" },
 			{ WEAPON_POLEARMS, "Polearms" },
