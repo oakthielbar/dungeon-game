@@ -49,10 +49,6 @@ namespace Modifiers{
 			}
 			void operator()(Actor *a);
 		};
-		void addCategoryDaggers (Actor *a);
-		void removeCategoryDaggers (Actor *a);
-		void addCategoryStaves (Actor *a);
-		void removeCategoryStaves (Actor *a);
 	}
 }
 
