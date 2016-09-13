@@ -1,8 +1,6 @@
 #ifndef MODIFIER_H
 #define MODIFIER_H
 
-#include <vector>
-
 class Actor;
 
 template <typename T>
