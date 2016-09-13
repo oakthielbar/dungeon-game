@@ -1,14 +1,14 @@
 #include "equipment.h"
 #include <map>
 #include <string>
-#include <cstdlib>
-#include "modifiers.h"
-#include "actor.h"
+#include <vector>	
 #include "equipment.h"
+#include "actor.h"
+#include "modifier.h"
 
-using std::cout;
 using std::map;
 using std::string;
+using std::vector;
 using Equipment::Category;
 
 namespace Equipment{
@@ -39,20 +39,17 @@ namespace Equipment{
 
 namespace Modifiers{
 	namespace Equipment{
-		void addUsableCategory (Actor *a, ::Equipment::Category c){
-			a->addUsableEquipmentTypes(c);
+		void addUsableCategories::operator()(Actor *a){
+			vector<::Equipment::Category>::iterator cIt;
+			for(cIt = param.begin(); cIt != param.end(); cIt++){
+				a->addUsableEquipmentTypes(*cIt);
+			} 
 		}
-		void addCategoryDaggers (Actor *a){
-			a->addUsableEquipmentTypes(::Equipment::Category::WEAPON_DAGGERS);
-		}
-		void removeCategoryDaggers (Actor *a){
-			a->removeUsableEquipmentTypes(::Equipment::Category::WEAPON_DAGGERS);
-		}
-		void addCategoryStaves (Actor *a){
-			a->addUsableEquipmentTypes(::Equipment::Category::WEAPON_STAVES);
-		}
-		void removeCategoryStaves (Actor *a){
-			a->removeUsableEquipmentTypes(::Equipment::Category::WEAPON_STAVES);
+		void removeUsableCategories::operator()(Actor *a){ 
+			vector<::Equipment::Category>::iterator cIt;
+			for(cIt = param.begin(); cIt != param.end(); cIt++){
+				a->removeUsableEquipmentTypes(*cIt);
+			}
 		}
 	}
 }

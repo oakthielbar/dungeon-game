@@ -1,12 +1,16 @@
 #ifndef EQUIPMENT_H
 #define EQUIPMENT_H
 
+class Actor;
+
 #include <map>
 #include <string>
-#include "actor.h"
+#include <vector>
+#include "modifier.h"
 
 using std::map;
 using std::string;
+using std::vector;
 
 namespace Equipment{
 	enum Category{
@@ -33,7 +37,18 @@ namespace Equipment{
 
 namespace Modifiers{
 	namespace Equipment{
-		void addUsableCategory (Actor *a, ::Equipment::Category c);
+		struct addUsableCategories : public modifier<vector<::Equipment::Category> >{
+			addUsableCategories(vector<::Equipment::Category> c){
+				param = c;
+			}
+			void operator()(Actor *a);
+		};
+		struct removeUsableCategories : public modifier<vector<::Equipment::Category> >{
+			removeUsableCategories(vector<::Equipment::Category> c){
+				param = c;
+			}
+			void operator()(Actor *a);
+		};
 		void addCategoryDaggers (Actor *a);
 		void removeCategoryDaggers (Actor *a);
 		void addCategoryStaves (Actor *a);

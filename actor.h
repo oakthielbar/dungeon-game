@@ -4,7 +4,6 @@
 #include <string>
 #include <vector>
 #include "datatypes.h"
-#include "descriptor.h"
 #include "modification.h"
 #include "equipment.h"
 

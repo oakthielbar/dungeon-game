@@ -4,6 +4,7 @@
 #include <cstdlib>
 #include "datatypes.h"
 #include "pc.h"
+#include "modifier.h"
 #include "modification.h"
 #include "equipment.h"
 

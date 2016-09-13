@@ -54,7 +54,7 @@ vector<modification*> Actor::getModifications(){
 void Actor::addModification(modification *m){
 	modifications.push_back(m);
 
-  	vector< pair<modify, unmodify> >::iterator modifiersIt;
+  	vector< pair<func, func> >::iterator modifiersIt;
   	for(modifiersIt = m->modifiers.begin(); modifiersIt != m->modifiers.end(); modifiersIt++){
 		modifiersIt->first(this);
   	}
@@ -64,7 +64,7 @@ void Actor::removeModification(modification *m){
   	vector<modification*>::iterator modificationsIt;
 	modificationsIt = std::find(modifications.begin(), modifications.end(), m);
 	if(modificationsIt != modifications.end()){
-  		vector< pair<modify, unmodify> >::iterator modifiersIt;
+  		vector< pair<func, func> >::iterator modifiersIt;
 	  	for(modifiersIt = m->modifiers.begin(); modifiersIt != m->modifiers.end(); modifiersIt++){
 			modifiersIt->second(this);
 	  	}
