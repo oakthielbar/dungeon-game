@@ -27,7 +27,7 @@ void displayPcInfo(Pc *player){
 	} else {
 		vector<modification*>::iterator modsIt;
 		for(modsIt = mods.begin(); modsIt != mods.end(); modsIt++){
-			cout << (*modsIt)->name << " ";
+			cout << "[" << (*modsIt)->name << "] ";
 		}
 	}
 
@@ -41,7 +41,7 @@ void displayPcInfo(Pc *player){
 	} else {
 		vector<Equipment::Category>::iterator uetIt;
 		for(uetIt = uet.begin(); uetIt != uet.end(); uetIt++){
-			cout << Equipment::getCategoryName(*uetIt) << " ";
+			cout << "[" << Equipment::getCategoryName(*uetIt) << "] ";
 		}
 	}
 
