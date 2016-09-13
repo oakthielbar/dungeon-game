@@ -25,35 +25,4 @@ namespace Modification{
 	}
 }
 
-/*
-typedef void (*modify)(Actor*, vector<any>);
-typedef void (*unmodify)(Actor*, vector<any>);
-
-namespace Modification{
-	struct modification{
-		string name;
-		vector<pair<modify, unmodify> > modifiers;
-		vector<any> modParams;
-	};
-
-	namespace Modifications{
-		extern modification usesLightWeapons;
-	}
-}
-*/
-
-
-/*
-namespace Modification{
-	struct modification{
-		string name;
-		pair<modify, unmodify> modFunctions;
-	};
-
-	namespace ModFunctions{
-		void addLightWeapons(Actor *a);
-		void removeLightWeapons(Actor *a);
-	}
-*/
-
 #endif
